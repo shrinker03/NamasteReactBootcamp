@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namste React</title>
+    <title>Namste-React-Day-1-Assignment</title>
 </head>
 <body>
+    <h1>Rendered Using HTML</h1>
+    <div id="rootJs"></div>
     <div id="root"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin>
-    </script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script>
-        const heading = React.createElement("h1", {className: 'usingReact'}, ["Hello World", " ", "No more looking back"]);
-        console.log(heading, 'heading===>')
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(heading);
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>
