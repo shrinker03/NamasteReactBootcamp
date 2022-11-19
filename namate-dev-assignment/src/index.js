@@ -1,6 +1,9 @@
+import React from "react"
+import ReactDOM from "react-dom/client";
+
 //Rendered using Js
 const header = document.createElement('h1')
-header.textContent = 'Rendered Using H1'
+header.textContent = 'Rendered Using JS'
 header.className = 'Container'
 const rootJs = document.getElementById('rootJs')
 rootJs.append(header)
