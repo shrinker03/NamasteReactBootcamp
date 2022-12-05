@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import { Team } from '../data';
 
-const SearchBox = ({setData}) => {
+const SearchBox = ({setFilteredData, data}) => {
   const [search, setSearch] = useState('');
 
   const filterSearch = (e) => {
     e.preventDefault()
-    const newArr = Team?.filter((person) => person.name.toLowerCase().includes(search))
-    newArr.length ? setData(newArr) : setData(Team)
+    const newArr = data?.filter((person) => person?.login?.toLowerCase().includes(search?.toLowerCase()) || person?.name?.toLowerCase().includes(search?.toLowerCase()))
+    setFilteredData(newArr)
   }
 
   return (

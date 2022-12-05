@@ -9,7 +9,7 @@ export const Team = [
 		"organization": "Truscholar",
 		"designation": "Full-Stack Engineer",
 		"linkedin": "https://www.linkedin.com/in/shivam-damre-b84538170/",
-		"github": "https://github.com/shrinker03"
+		"github": "shrinker03"
 	},
 	{
 		"id": 202,
@@ -19,7 +19,7 @@ export const Team = [
 		"organization": "Frappe Tech",
 		"designation": "Engineering Lead",
 		"linkedin": "https://www.linkedin.com/in/rucha-mahabal-4b0102187",
-		"github": "https://github.com/ruchamahabal"
+		"github": "ruchamahabal"
 	},
 	{
 		"id": 203,
@@ -29,7 +29,7 @@ export const Team = [
 		"organization": "myPaisaa",
 		"designation": "Software Engineer",
 		"linkedin": "https://www.linkedin.com/in/rishav-sah-b1966b190/",
-		"github": "https://github.com/rishav-sah"
+		"github": "rishav-sah"
 	},
 	{
 		"id": 204,
@@ -39,7 +39,7 @@ export const Team = [
 		"organization": "Deloitte USI",
 		"designation": "Software Engineer",
 		"linkedin": "https://www.linkedin.com/in/vinay-sai-211452212/",
-		"github": "https://github.com/vinaysaip"
+		"github": "vinaysaip"
 	},
 	{
 		"id": 248,
@@ -49,7 +49,7 @@ export const Team = [
 		"organization": "Deloitte USI",
 		"designation": "Software Engineer",
 		"linkedin": "https://www.linkedin.com/in/pratik-mothe-40a418106/",
-		"github": "https://github.com/Pratik33"
+		"github": "Pratik33"
 	},
 	{
 		"id": 206,
@@ -59,7 +59,7 @@ export const Team = [
 		"organization": "Growth Natives",
 		"designation": "Software Engineer",
 		"linkedin": "https://www.linkedin.com/in/shubhamdsm",
-		"github": "https://github.com/shubhamyadav30"
+		"github": "shubhamyadav30"
 	},
 	{
 		"id": 217,
@@ -69,7 +69,7 @@ export const Team = [
 		"organization": "Anika Media Pvt Ltd",
 		"designation": "Software Engineer",
 		"linkedin": "https://www.linkedin.com/in/shailendrasinghraikwar",
-		"github": "https://github.com/ShailendraSinghRaikwar"
+		"github": "ShailendraSinghRaikwar"
 	},
 	{
 		"id": 208,
@@ -79,7 +79,7 @@ export const Team = [
 		"organization": "SAPLabs",
 		"designation": "Senior Developer",
 		"linkedin": "https://www.linkedin.com/in/abhishekanand001",
-		"github": "https://github.com/abhishekps782"
+		"github": "abhishekps782"
 	},
 	{
 		"id": 209,
@@ -89,7 +89,7 @@ export const Team = [
 		"organization": "Abeam Analytics",
 		"designation": "Senior Consultant",
 		"linkedin": "https://www.linkedin.com/in/mojahid-92605828",
-		"github": "https://github.com/mojahidhd"
+		"github": "mojahidhd"
 	},
 	{
 		"id": 210,
@@ -99,6 +99,6 @@ export const Team = [
 		"organization": "Cognizant",
 		"designation": "Software Engineer",
 		"linkedin": "https://www.linkedin.com/in/taj-ahmad-shaik-49b641215",
-		"github": "https://github.com/taj0598",
+		"github": "taj0598",
 	}
 ];
