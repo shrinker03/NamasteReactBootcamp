@@ -5,16 +5,26 @@ const SearchBox = ({ setFilteredData, data }) => {
 
   const filterSearch = (e) => {
     e.preventDefault();
-    const newArr = data?.filter(
-      (person) =>
-        person?.login?.toLowerCase().includes(search?.toLowerCase()) ||
-        person?.name?.toLowerCase().includes(search?.toLowerCase())
-    );
-    setFilteredData(newArr);
+    // const newArr = data?.filter(
+    //   (person) =>
+    //     search == '' ||
+    //     person?.name?.trim().toLowerCase().includes(search?.trim().toLowerCase()) ||
+    //     person?.login?.trim().toLowerCase().includes(search?.trim().toLowerCase())
+    // );
+    const latestarr = [];
+    for (let i = 0; i < data.length; i += 1) {
+      if (
+        search === '' ||
+        data[i]?.name?.trim().toLowerCase().includes(search?.trim().toLowerCase())
+      ) {
+        latestarr.push(data[i]);
+      }
+    }
+    setFilteredData(latestarr);
   };
 
   return (
-    <div>
+    <div className="search-box">
       <label className="input-label-search">Search Member</label>
       <form onSubmit={filterSearch}>
         <input

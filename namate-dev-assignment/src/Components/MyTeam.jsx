@@ -1,45 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { getMembersData } from '../utils/GetMembersData';
+import { githubUserNames } from '../utils/GithubInfo';
 import CardContainer from './CardContainer';
-import Header from './Header';
+import SearchBox from './SearchBox';
 
 const MyTeam = () => {
   const [githubData, setGithubData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getTeamMembers();
   }, []);
 
-  const getMembersData = (githubNames) => {
-    return Promise.all(
-      githubNames.map(async (githubName) => {
-        return (await fetch(`https://api.github.com/users/${githubName}`)).json();
-      })
-    );
-  };
-
   const getTeamMembers = async () => {
-    const githubUserNames = [
-      'shrinker03',
-      'ruchamahabal',
-      'rishav-sah',
-      'vinaysaip',
-      'Pratik33',
-      'shubhamyadav30',
-      'ShailendraSinghRaikwar',
-      'abhishekps782',
-      'mojahidhd',
-      'taj0598'
-    ];
+    setLoading(true);
     let users = await getMembersData(githubUserNames);
-    console.log(users, '===');
-    setGithubData(users);
-    setFilteredData(users);
+    if (users.length) {
+      setLoading(false);
+      setGithubData(users);
+      setFilteredData(users);
+    }
   };
   return (
     <div className="container">
-      <Header githubData={githubData} setFilteredData={setFilteredData} />
-      <CardContainer githubData={filteredData.length ? filteredData : githubData} />
+      <SearchBox data={githubData} setFilteredData={setFilteredData} />
+      <CardContainer loading={loading} data={filteredData} />
     </div>
   );
 };

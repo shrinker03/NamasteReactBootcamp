@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import RepoIcon from '../assets/repo-icon.png';
+import RepoIcon from '../../public/assets/repo-icon.png';
 
 const MateInfo = () => {
   const { id } = useParams();
@@ -44,7 +44,7 @@ const MateInfo = () => {
       <div className="mate-card-details">
         <h2>Mate Repository</h2>
         <div className="repo-container">
-          {repoData.map((repo) => (
+          {repoData?.map((repo) => (
             <a
               target="_blank"
               className="repo-link"

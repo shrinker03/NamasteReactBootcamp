@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkedinIcon from '../assets/linkedin-icon.png';
-import GithubIcon from '../assets/github-icon.png';
+import LinkedinIcon from '../../public/assets/linkedin-icon.png';
+import GithubIcon from '../../public/assets/github-icon.png';
 
 const Card = ({ info }) => {
   const { name, company, location, bio, linkedin, html_url: url, avatar_url: avatar } = info;

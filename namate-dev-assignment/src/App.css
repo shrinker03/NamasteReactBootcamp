@@ -6,7 +6,7 @@ body {
 }
 .container {
     display: flex;
-    gap: 30;
+    gap: 5;
     flex-direction: column;
 }
 
@@ -76,20 +76,20 @@ body {
 }
 
 .input-search {
-    height: 30px;
-    width: 200px;
+    height: 35px;
+    width: 250px;
     border-radius: 5px;
+    margin-top: 10;
 }
 
 .input-label-search {
-    margin-right: 5;
-    font-size: 14;
+    font-size: 18;
     font-weight: normal;
 }
 
 .search-box-button {
-    width: 70;
-    height: 37;
+    width: 80;
+    height: 40;
     margin-left: 5;
     cursor: pointer;
     border-radius: 5;
@@ -194,4 +194,17 @@ body {
 .repo-link {
     text-decoration: none;
     color: #05386B;
+}
+
+.search-box {
+    padding-top: 20;
+    padding-left: 30;
+}
+
+.not-found-img {
+    width: 400;
+}
+
+.div-not-found-img {
+    align-self: center;
 }
