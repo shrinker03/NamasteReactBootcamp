@@ -22,9 +22,14 @@ const MyTeam = () => {
       setFilteredData(users);
     }
   };
+
   return (
     <div className="container">
-      <SearchBox data={githubData} setFilteredData={setFilteredData} />
+      <SearchBox
+        data={githubData}
+        setFilteredData={setFilteredData}
+        getTeamMembers={getTeamMembers}
+      />
       <CardContainer loading={loading} data={filteredData} />
     </div>
   );

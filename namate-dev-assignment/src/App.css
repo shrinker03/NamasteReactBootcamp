@@ -96,6 +96,15 @@ body {
     color: #05386B;
 }
 
+.search-box-button-get-team {
+    height: 40;
+    margin-left: 10;
+    cursor: pointer;
+    border-radius: 5;
+    background-color: #05386B;
+    color: #EDF5E1;
+}
+
 .route-error {
     display: flex;
     justify-content: center;
@@ -207,4 +216,22 @@ body {
 
 .div-not-found-img {
     align-self: center;
+}
+
+.header-link {
+    text-decoration: none;
+    color: #EDF5E1;
+}
+
+.search-label {
+    margin-left: 10;
+}
+
+.search-filter {
+    height: 40;
+    margin-left: 5;
+    cursor: pointer;
+    border-radius: 5;
+    background-color: #273748;
+    color: #EDF5E1;
 }
