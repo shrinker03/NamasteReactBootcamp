@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    background: #5CDB95;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+}
+.container {
+    display: flex;
+    gap: 5;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: #05386B;
+    color: #EDF5E1;
+    padding: 10;
+    justify-content: space-between;
+}
+
+.header-heading {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card-continer {
+    display: flex;
+    gap: 20;
+    flex-wrap: wrap;
+    padding: 30;
+    justify-content: space-between;
+}
+
+.card {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    background: #EDF5E1;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10;
+    color: #05386B;
+}
+.card-img {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-self: center;
+}
+
+.card-content {
+    padding: 20;
+}
+
+.hr {
+    border-style: solid #05386B;
+}
+
+.card-name {
+    font-size: 22;
+    font-weight: 500;
+    margin-bottom: 5;
+}
+
+.card-address {
+    margin: 5px 0;
+}
+
+.card-icons {
+    display: flex;
+    margin-top: 15;
+    justify-content: space-around;
+}
+
+.input-search {
+    height: 35px;
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 10;
+}
+
+.input-label-search {
+    font-size: 18;
+    font-weight: normal;
+}
+
+.search-box-button {
+    width: 80;
+    height: 40;
+    margin-left: 5;
+    cursor: pointer;
+    border-radius: 5;
+    color: #05386B;
+}
+
+.search-box-button-get-team {
+    height: 40;
+    margin-left: 10;
+    cursor: pointer;
+    border-radius: 5;
+    background-color: #05386B;
+    color: #EDF5E1;
+}
+
+.route-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50;
+    flex-direction: column;
+}
+
+.page-not-found-gif {
+    height: 400;
+    width: 400;
+    border-radius: 10;
+}
+
+.go-back-button {
+    width: 100;
+    height: 50;
+    background: #05386B;
+    color: #EDF5E1;
+    cursor: pointer;
+    border-radius: 5;
+    margin-top: 10;
+}
+
+.mate-container {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30;
+    padding: 50;
+}
+
+.mate-card {
+    width: 300;
+    height: 300;
+    display: flex;
+    justify-content: center;
+    background: #EDF5E1;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 15;
+    flex-direction: column;
+    padding: 10;
+    color: #05386B;
+}
+
+.mate-card > img {
+    border-radius: 15;
+}
+
+.mate-card-details {
+    width: 100%;
+    background: #EDF5E1;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 15;
+    flex-direction: row;
+    padding: 10;
+    color: #05386B;
+    padding: 20;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20
+}
+
+.mate-card-info {
+    display: flex;
+    max-width: 300;
+    gap: 10;
+    align-items: center;
+    background: #EDF5E1;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 15;
+    flex-direction: column;
+    padding: 10;
+    color: #05386B;
+}
+
+.follower-following {
+    margin: 5
+}
+
+.repo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10;
+    justify-content: space-between;
+}
+
+.repo-item {
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.repo-link {
+    text-decoration: none;
+    color: #05386B;
+}
+
+.search-box {
+    padding-top: 20;
+    padding-left: 30;
+}
+
+.not-found-img {
+    width: 400;
+}
+
+.div-not-found-img {
+    align-self: center;
+}
+
+.header-link {
+    text-decoration: none;
+    color: #EDF5E1;
+}
+
+.search-label {
+    margin-left: 10;
+}
+
+.search-filter {
+    height: 40;
+    margin-left: 5;
+    cursor: pointer;
+    border-radius: 5;
+    background-color: #273748;
+    color: #EDF5E1;
+}
