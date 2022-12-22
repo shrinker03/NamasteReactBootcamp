@@ -5,7 +5,7 @@ import { ThemeContext } from '../Contexts/ThemeContextProvider';
 import { Link } from 'react-router-dom';
 
 const Card = ({ info }) => {
-  const { name, company, location, bio, linkedin, html_url: url, avatar_url: avatar, login } = info;
+  const { name, company, location, linkedin, html_url: url, avatar_url: avatar, login } = info;
   const [theme] = useContext(ThemeContext);
   return (
     <div className={`card ${theme === 'Light' ? 'card-light' : 'card-dark'}`}>
@@ -16,12 +16,9 @@ const Card = ({ info }) => {
       </Link>
       <div className="card-content">
         <hr className="hr" />
-        <div className="card-name">
-          {(name ?? 'John Doe') + ', '}
-          <span>{company || ''}</span>
-        </div>
+        <div className="card-name">{name ?? 'John Doe'}</div>
+        <div className="card-name">{company || ''}</div>
         <div className="card-address">{location}</div>
-        <div>{bio}</div>
         <div className="card-icons">
           <a href={linkedin} target="_blank" rel="noreferrer">
             <img loading="lazy" width={30} height={30} src={LinkedinIcon} alt="linkedin-icon" />

@@ -32,7 +32,7 @@ const MyTeam = () => {
   };
 
   return (
-    <div className="container">
+    <div className="flex gap-1 flex-col">
       <SearchBox
         data={githubData}
         setFilteredData={setFilteredData}

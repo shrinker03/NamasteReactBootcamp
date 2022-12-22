@@ -5,13 +5,18 @@ import { ThemeContext } from '../Contexts/ThemeContextProvider';
 const Header = () => {
   const [theme, toggleTheme] = useContext(ThemeContext);
   return (
-    <div className={`header ${theme === 'Light' ? 'header-light' : 'header-dark'}`}>
-      <div className="header-heading">
+    <div
+      className={`flex items-center justify-between h-20 ${
+        theme === 'Light'
+          ? 'bg-lightHeaderBgColor text-lightHeaderColor'
+          : 'bg-darkHeaderBgColor text-darkHeaderColor'
+      }`}>
+      <div className="text-2xl pl-2 font-bold">
         <Link className="header-link" to="/">
           Hustlers
         </Link>
       </div>
-      <div>
+      <div className="flex justify-center">
         <span className="theme-button" onClick={toggleTheme}>
           {theme === 'Light' ? (
             <svg
