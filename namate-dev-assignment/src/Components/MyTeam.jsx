@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { lazy, useEffect, useState } from 'react';
 import { getMembersData } from '../utils/GetMembersData';
 import { githubUserNames } from '../utils/GithubInfo';
-import CardContainer from './CardContainer';
-import SearchBox from './SearchBox';
+const CardContainer = lazy(() => import('./CardContainer'));
+const SearchBox = lazy(() => import('./SearchBox'));
 
 const MyTeam = () => {
   const [githubData, setGithubData] = useState([]);
@@ -15,11 +15,19 @@ const MyTeam = () => {
 
   const getTeamMembers = async () => {
     setLoading(true);
-    let users = await getMembersData(githubUserNames);
-    if (users.length) {
-      setLoading(false);
+    if (window.sessionStorage.getItem('teamInfo')) {
+      const users = JSON.parse(window.sessionStorage.getItem('teamInfo'));
       setGithubData(users);
       setFilteredData(users);
+      setLoading(false);
+      return;
+    }
+    let users = await getMembersData(githubUserNames);
+    if (users.length) {
+      setGithubData(users);
+      setFilteredData(users);
+      window.sessionStorage.setItem('teamInfo', JSON.stringify(users));
+      setLoading(false);
     }
   };
 

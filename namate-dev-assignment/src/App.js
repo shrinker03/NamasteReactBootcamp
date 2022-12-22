@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header';
+const Header = lazy(() => import('./Components/Header'));
+const ThemeContextProvider = lazy(() => import('./Contexts/ThemeContextProvider'));
+// import ThemeContextProvider from './Contexts/ThemeContextProvider';
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThemeContextProvider>
+        <Header />
+        <Outlet />
+      </ThemeContextProvider>
+    </Suspense>
   );
 };
 

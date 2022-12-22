@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Card from './Card';
-import Loading from './Loading';
-import NotFoundComponent from './NotFoundComponent';
+import React, { lazy } from 'react';
+const Card = lazy(() => import('./Card'));
+const Loading = lazy(() => import('./Loading'));
+const NotFoundComponent = lazy(() => import('./NotFoundComponent'));
 
 const CardContainer = ({ data, loading }) => {
   return (
@@ -12,11 +11,7 @@ const CardContainer = ({ data, loading }) => {
           <Loading />
         </div>
       ) : data.length ? (
-        data?.map((member) => (
-          <Link style={{ textDecoration: 'none' }} key={member.id} to={`/mate/${member.login}`}>
-            <Card info={member} />
-          </Link>
-        ))
+        data?.map((member) => <Card key={member?.id} info={member} />)
       ) : (
         <div>
           <NotFoundComponent />
