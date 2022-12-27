@@ -1,22 +1,37 @@
 import App from '../App';
 import { createBrowserRouter } from 'react-router-dom';
 import RouteError from '../Components/RouteError';
-import MateInfo from '../Components/MateInfo';
-import MyTeam from '../Components/MyTeam';
+const MateInfo = lazy(() => import('../Components/MateInfo'));
+const MyTeam = lazy(() => import('../Components/MyTeam'));
+import { lazy, Suspense } from 'react';
+import Loading from '../Components/Loading.jsx';
+import LandingPage from '../Components/LandingPage';
 
 export const Router = createBrowserRouter([
   {
     path: '/',
+    element: <LandingPage />,
+    errorElement: <RouteError />
+  },
+  {
+    path: '/',
     element: <App />,
-    errorElement: <RouteError />,
     children: [
       {
-        path: '',
-        element: <MyTeam />
+        path: 'mates',
+        element: (
+          <Suspense fallback={<Loading />}>
+            <MyTeam />
+          </Suspense>
+        )
       },
       {
-        path: 'mate/:id',
-        element: <MateInfo />
+        path: 'mates/:id',
+        element: (
+          <Suspense fallback={<Loading />}>
+            <MateInfo />
+          </Suspense>
+        )
       }
     ]
   }

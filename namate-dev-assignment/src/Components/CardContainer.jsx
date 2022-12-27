@@ -1,14 +1,14 @@
-import React, { lazy } from 'react';
-const Card = lazy(() => import('./Card'));
-const Loading = lazy(() => import('./Loading'));
-const NotFoundComponent = lazy(() => import('./NotFoundComponent'));
+import React from 'react';
+import Card from './Card';
+import LoaderComponent from './Loading';
+import NotFoundComponent from './NotFoundComponent';
 
 const CardContainer = ({ data, loading }) => {
   return (
     <div className="card-continer">
       {loading ? (
         <div>
-          <Loading />
+          <LoaderComponent />
         </div>
       ) : data.length ? (
         data?.map((member) => <Card key={member?.id} info={member} />)

@@ -1,8 +1,8 @@
-import React, { lazy, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getMembersData } from '../utils/GetMembersData';
 import { githubUserNames } from '../utils/GithubInfo';
-const CardContainer = lazy(() => import('./CardContainer'));
-const SearchBox = lazy(() => import('./SearchBox'));
+import CardContainer from './CardContainer';
+import SearchBox from './SearchBox';
 
 const MyTeam = () => {
   const [githubData, setGithubData] = useState([]);
