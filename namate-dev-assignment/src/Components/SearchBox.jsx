@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../Contexts/ThemeContextProvider';
 import useFilterHook from '../Hooks/useFilterHook';
 
 const SearchBox = ({ setFilteredData, data, getTeamMembers }) => {
+  const [theme] = useContext(ThemeContext);
   const [search, setSearch] = useState('');
   const [showGetTeamButton, setShowGetTeamButton] = useState(false);
   const [city, setCity] = useState('');
-  const filterCityArr = [];
 
   const filterSearch = (e) => {
     e.preventDefault();
@@ -44,16 +45,26 @@ const SearchBox = ({ setFilteredData, data, getTeamMembers }) => {
 
   return (
     <div className="search-box">
-      <label className="input-label-search">Search Member</label>
+      <label className="font-normal text-lg">Search Member</label>
       <form onSubmit={filterSearch}>
         <input
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
           }}
-          className="input-search"
+          className={`h-10 w-64 rounded-md pl-2 ${
+            theme === 'Light'
+              ? 'bg-lightHeaderBgColor text-lightHeaderColor'
+              : 'bg-darkHeaderBgColor text-darkHeaderColor'
+          }`}
         />
-        <button className="search-box-button" type="submit">
+        <button
+          className={`w-20 h-10 ml-1 cursor-pointer rounded-md ${
+            theme === 'Light'
+              ? 'bg-lightHeaderBgColor text-lightHeaderColor'
+              : 'bg-darkHeaderBgColor text-darkHeaderColor'
+          }`}
+          type="submit">
           Search
         </button>
         <label className="search-label">Filter by city:</label>
@@ -63,11 +74,13 @@ const SearchBox = ({ setFilteredData, data, getTeamMembers }) => {
             setCity(e.target.value);
             setShowGetTeamButton(true);
           }}>
-          {data?.map((data) => {
-            if (data.location) {
+          {Array.from(
+            new Set(data?.map((item) => item?.location?.toLowerCase().split(', ')[0]))
+          ).map((city) => {
+            if (city) {
               return (
-                <option value={data.location} key={data.id}>
-                  {data.location}
+                <option value={city} key={data.id}>
+                  {city.toUpperCase()}
                 </option>
               );
             }
