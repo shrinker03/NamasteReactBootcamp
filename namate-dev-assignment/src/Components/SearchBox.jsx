@@ -5,6 +5,7 @@ const SearchBox = ({ setFilteredData, data, getTeamMembers }) => {
   const [search, setSearch] = useState('');
   const [showGetTeamButton, setShowGetTeamButton] = useState(false);
   const [city, setCity] = useState('');
+  const filterCityArr = [];
 
   const filterSearch = (e) => {
     e.preventDefault();

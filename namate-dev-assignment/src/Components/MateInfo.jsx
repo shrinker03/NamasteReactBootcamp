@@ -1,12 +1,14 @@
-import React, { lazy, useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-const BookIcon = lazy(() => import('./BookSVG'));
+import BookIcon from './BookSVG';
 import { ThemeContext } from '../Contexts/ThemeContextProvider';
+import Loading from './Loading';
 
 const MateInfo = () => {
   const { id } = useParams();
   const [mateData, setMateData] = useState({});
   const [repoData, setRepoData] = useState([]);
+  const [loadingRepo, setLoadingRepo] = useState(false);
   const { avatar_url, name, followers, following, bio } = mateData;
 
   const [theme] = useContext(ThemeContext);
@@ -18,9 +20,13 @@ const MateInfo = () => {
   };
 
   const getMateRepo = async () => {
+    setLoadingRepo(true);
     const data = await fetch(`https://api.github.com/users/${id}/repos`);
     const json = await data.json();
     setRepoData(json);
+    if (repoData) {
+      setLoadingRepo(false);
+    }
   };
   useEffect(() => {
     getMateInfo();
@@ -51,6 +57,7 @@ const MateInfo = () => {
         }`}>
         <h2>Mate Repository</h2>
         <div className="repo-container">
+          {loadingRepo && <Loading />}
           {repoData?.map((repo) => (
             <a
               target="_blank"

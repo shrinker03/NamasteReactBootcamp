@@ -11,8 +11,8 @@ const Card = ({ info }) => {
     <div className={`card ${theme === 'Light' ? 'card-light' : 'card-dark'}`}>
       <Link
         style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center' }}
-        to={`/mate/${login}`}>
-        <img loading="lazy" className="card-img" src={avatar} alt="avatar_url" />
+        to={`/mates/${login}`}>
+        <img loading="lazy" className="card-img rounded-lg" src={avatar} alt="avatar_url" />
       </Link>
       <div className="card-content">
         <hr className="hr" />
