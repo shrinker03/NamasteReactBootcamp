@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { WATCH_VIDEO_INFO_URL } from '../appConstants'
 import Comments from '../components/Comments'
+import LiveChat from '../components/LiveChat'
 import { closeAppBar } from '../slices/appBarSlice'
 import { setVideoInfo } from '../slices/watchVideoSlice'
 
@@ -28,8 +29,11 @@ const WatchVideo = () => {
 
   return (
     <div className={`w-[100vw] h-[100vh] ${appBarOpen ? 'py-3' : 'p-7'}`}>
-        <div className='flex w-[80%] h-[80%]'>
-            <iframe width="100%" height="100%" src={"https://www.youtube.com/embed/"+params.id} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div className='flex gap-2'>
+            <div className='w-[75%] h-[70vh]'>
+                <iframe width="100%" height="100%" src={"https://www.youtube.com/embed/"+params.id} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <LiveChat />
         </div>
         <Comments />
     </div>

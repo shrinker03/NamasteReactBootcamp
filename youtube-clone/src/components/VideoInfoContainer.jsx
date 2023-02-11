@@ -7,7 +7,7 @@ import VideoInfo from './VideoInfo';
 
 const VideoContainer = () => {  
   const dispatch = useDispatch();
-  const videoList = useSelector((state) => state.videoList.videos.payload)
+  const videoList = useSelector((state) => state.videoList.videos)
   console.log(videoList, '===>')
   const fetchVids = async () => {
     console.log('im being called???')
@@ -17,7 +17,7 @@ const VideoContainer = () => {
   }
 
   useEffect(() => {
-    if(!videoList) {
+    if(!videoList.length) {
       fetchVids()
     }
   }, []);

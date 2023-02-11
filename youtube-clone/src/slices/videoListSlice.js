@@ -9,8 +9,8 @@ export const videoListSlice = createSlice({
     name: 'videoList',
     initialState,
     reducers: {
-        setVideoList: (state, payload) => {
-            state.videos = payload
+        setVideoList: (state, action) => {
+            state.videos = action.payload
         }
     }
 })
