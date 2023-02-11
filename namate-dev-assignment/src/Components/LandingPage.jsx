@@ -26,6 +26,7 @@ const LandingPage = () => {
           <div className="p-10 flex justify-center gap-3 flex-col">
             <label>Name</label>
             <input
+              value={name}
               className="p-2 rounded-sm text-lightHeaderColor"
               type="text"
               placeholder="John"
@@ -33,6 +34,7 @@ const LandingPage = () => {
             />
             <label>Email</label>
             <input
+              value={email}
               placeholder="john@doe.com"
               className="p-2 rounded-sm text-lightHeaderColor"
               type="email"

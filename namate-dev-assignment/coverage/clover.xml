@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1672748903667" clover="3.2.0">
+  <project timestamp="1672748903667" name="All files">
+    <metrics statements="23" coveredstatements="20" conditionals="14" coveredconditionals="6" methods="7" coveredmethods="4" elements="44" coveredelements="30" complexity="0" loc="23" ncloc="23" packages="3" files="3" classes="3"/>
+    <package name="Components">
+      <metrics statements="10" coveredstatements="8" conditionals="8" coveredconditionals="4" methods="4" coveredmethods="2"/>
+      <file name="Header.jsx" path="C:\Users\Acer\Workspace\React-Course\namaste-react\namate-dev-assignment\src\Components\Header.jsx">
+        <metrics statements="10" coveredstatements="8" conditionals="8" coveredconditionals="4" methods="4" coveredmethods="2"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Contexts">
+      <metrics statements="12" coveredstatements="11" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="2"/>
+      <file name="ThemeContextProvider.js" path="C:\Users\Acer\Workspace\React-Course\namaste-react\namate-dev-assignment\src\Contexts\ThemeContextProvider.js">
+        <metrics statements="12" coveredstatements="11" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Redux">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="store.js" path="C:\Users\Acer\Workspace\React-Course\namaste-react\namate-dev-assignment\src\Redux\store.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
